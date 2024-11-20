@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Sour+Gummy&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Sour Gummy", sans-serif;
+    background: #f1fbff;
+    position: relative;
+}
+
+
+.section-padding{
+    padding: 100px 0;
+}
+
+.section-header, .card-title{
+    font-family: "Raleway", sans-serif;
+}
+
+.active{
+    color: #ffc107 !important;
+    border-bottom: 2px solid #ffc107 !important;
+}
+
+/* nav start */
+.navbar-nav a{
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+}
+
+.navbar-nav a:hover{
+    color: #ffc107;
+    border-bottom: 2px solid #ffc107;
+}
+
+.navbar-light .navbar-brand{
+    color: #000;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+@media(min-width:992px) {
+    .navbar .navbar-collapse{
+        border: none !important;
+    }
+}
+
+/* nav end */
+
+/* carousel start */
+.carousel-item{
+    height: 100vh;
+    min-height: 300px;
+}
+
+.carousel-caption{
+    bottom: 220px;
+    z-index: 2;
+}
+.carousel-caption h5{
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
+}
+.carousel-caption p{
+    width: 60%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+.carousel-inner::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .7);
+    z-index: 1;
+}
+
+#main-carousel{
+    font-family: "Raleway", sans-serif;
+}
+
+.w-100 {
+	height: 100vh;
+}
+/* carousel end */
+
+
+/*services start*/
+#services .card-body i{
+    padding-bottom: 15px;
+    color: #ffc107;
+}
+
+#services .card-body .card-title{
+    padding: 15px;
+    letter-spacing: 1px;
+}
+
+#services .card{
+    border: 5px solid #ffc107;
+}
+/*services end*/
+
+
+/* teams start */
+#team .teams-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.teams-container .box{
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+}
+.imgBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .imgBox img {
+    width: 20rem;
+    height: 20rem;
+    object-fit: cover;
+    resize: both;
+  }
+  
+  .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    background-color: #fff;
+    z-index: 1;
+    align-items: flex-end;
+    text-align: center;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .content h2 {
+    font-family: "Raleway", sans-serif;
+    display: block;
+    font-size: 2rem;
+    color: #111;
+    font-weight: 500;
+    line-height: 2rem;
+    letter-spacing: 1px;
+  }
+  
+  .content span {
+    color: #555;
+    font-size: 1.4rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+  }
+
+  .teams-container .box:hover .imgBox {
+    transform: translate(-3rem, -3rem);
+  }
+  
+  .teams-container .box:hover .content {
+    transform: translate(3.5rem, 3.5rem);
+  }
+  
+  
+  @media (max-width: 992px) {
+    #team .teams-container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding: 0 1rem;
+    }
+    
+   .col-12{
+        justify-items: center;
+   }
+    .teams-container .box{
+       margin-top: 4rem;
+    }
+    .content{
+        padding: 1rem;
+    }
+   
+  }
+
+/* teams end */
+
+
+
+
+/* === responsive css === */
+
+@media(max-width:1200px){
+    .teams-container .box:hover .content {
+        transform: translate(0, 3.5rem);
+      }
+      .teams-container .box:hover .imgBox {
+        transform: translate(0, -3.5rem);
+      }
+}
+
+
+
+@media(min-width:768px) and (max-width:991px) {
+
+    .card{
+        margin: 1rem 0;
+    }
+    .carousel-caption{
+        bottom: 370px;
+    }
+    .carousel-caption p{
+        width: 100%;
+    }
+    .about-text{
+        padding-top: 60px;
+    }
+}
+
+
+@media(max-width:767px) {
+    .card{
+        margin: 1rem 0;
+    }
+    .navbar-nav{
+        display: inline-block;
+    }
+    .navbar-nav .nav-item{
+        margin: 8px 0;
+    }
+    .navbar .navbar-collapse{
+        text-align: center;
+    }
+    .carousel-caption{
+        bottom: 125px;
+    }
+    .carousel-caption h5{
+        font-size: 17px;
+    }
+    .carousel-caption a{
+        padding: 10px 15px;
+        font-size: 15px;
+    }
+    .carousel-caption p{
+        width: 100%;
+        line-height: 1.6;
+        font-size: 12px;
+    }
+    .about-text{
+        padding-top: 50px;
+    }
+}
